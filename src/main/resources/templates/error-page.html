@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>ERROR</title>
+	</head>
+	<body>
+		<h3>PARAMETER MISSING</h3>
+		<h3 th:if="${error} == 'license-number-missing'">Mohon masukan license number pilot</h3>
+		<h3 th:if="${error} == 'id-missing'">Mohon masukan nomor ID pilot</h3>
+	</body>
+</html>
