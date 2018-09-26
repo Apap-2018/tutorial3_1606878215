@@ -53,12 +53,10 @@ public class PilotController {
 			return "error-page";
 		} else {
 			try {
-				PilotModel archive = pilotService.getPilotDetailByLicenseNumber(licenseNumber);
-				System.out.println(archive.getLicenseNumber());	
+				PilotModel archive = pilotService.getPilotDetailByLicenseNumber(licenseNumber);	
 				model.addAttribute("pilot", archive);
 				return "view-pilot";
 			} catch (NullPointerException e) {
-				System.out.println("error");
 				model.addAttribute("error", "not-found-license-number");
 				return "not-found";
 			}
@@ -79,7 +77,6 @@ public class PilotController {
 				model.addAttribute("succeed", "update-flyHour");
 				return "succeed";
 			} catch (NullPointerException e) {
-				System.out.println("error");
 				model.addAttribute("error", "not-found-license-number");
 				return "not-found";
 			}
